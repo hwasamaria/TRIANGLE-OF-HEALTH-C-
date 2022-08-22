@@ -1,0 +1,218 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+class details{
+  private:char name[100];
+  char gender[100];
+  public:void read()
+  {
+    cout<<"enter name and gender \n";
+    cin>>name>>gender;
+  }
+  void display()
+  {
+    cout<<"name:\t \n"<<name<<"\ngender:\t \n"<<gender<<endl;
+  }
+};
+int main()
+{
+  details obj;
+obj.read();
+obj.display();
+  ifstream in;
+  string str1;
+  string str2;
+  string str3;
+  string str4;
+  string str5;
+  string str6;
+  string str7;
+  string str8;
+  string str9;
+  string str10;
+
+
+  in.open("social.txt");
+  if(!in)
+  {
+    cout<<"file does not exist \n";
+    return 1;
+  }
+  getline(in,str1);
+  getline(in,str2);
+  getline(in,str3);
+  getline(in,str4);
+  getline(in,str5);
+  getline(in,str6);
+  getline(in,str7);
+  getline(in,str8);
+  getline(in,str9);
+  getline(in,str10);
+
+  cout<<str1<<"\n"<<str2<<"\n"<<str3<<"\n"<<str4<<"\n"<<str5<<"\n"<<str6<<"\n"<<str7<<"\n"<<str8<<"\n"<<str9<<"\n"<<str10<<endl;
+in.close();
+ int A,B,C,D,E,F,G,H,I,J;
+ int sum;
+ printf("rate yourself 1 to 10  for the bove 10 questions \n");
+cin>>A>>B>>C>>D>>E>>F>>G>>H>>I>>J;
+sum=(A+B+C+D+E+F+G+H+I+J)/10;
+if(sum<=10 &&sum>=1)
+ {
+if(sum<=7)
+{
+  cout<<"\nyou are not socially associated with people well ........!!!!!!try to improve your skills ........!!!\n";
+}
+ else if(sum>=7)
+ {
+   cout<<"\nyou are socially associated with people well..........!!!keep rocking......!!!\n";
+ }
+ }
+ else
+ {
+   cout<<"invalid input \n";
+ }
+  cout<<" \nweight in kg : ";
+  double weight;
+  cin>>weight;
+  cout<<"\nheight in meters : ";
+  double height;
+  cin>>height;
+  double BMI=weight/(height*height);
+  cout<<"BMI is :\n"<<BMI;
+  if(BMI<18.5)
+  cout<<"\n you are underweight !!..........try to improve \n";
+  if(BMI>=18.5&& BMI<=25)
+  
+    cout<<" \nyou are physically fit.....good work.....!!";
+  if(BMI>25)
+    cout<<"\nyou are overweight....!!.....try to loose ";
+int mentalage;
+int presentage;
+int IQ;
+int T,U,V,W,X;
+  char ans;
+  int value;
+T=0;
+U=0;
+V=0;
+W=0;
+X=0;
+cout << "\n Welcome to the IQ Test!! \n";
+cout << "There are five questions to solve: \n" << endl;
+cout<<"question 1:\n";
+cout<<"Which number should come next in the series? 1 ,1,2,3,5, \n" <<endl;
+			cout << "A. 8                     B. 21" << endl;
+			cout << "C. 26                    D. 13"<<endl;
+			cin >> ans;
+      switch (ans)
+			{
+			case 'A' :
+				cout << " Wrong answer!\n";
+				break;
+			case 'B' :
+			    cout << " Wrong answer!\n";
+					break;
+			case 'C' :
+				cout << " Wrong answer!\n";
+					break;
+			default:
+				cout <<" You got the correct answer!\n";
+        T=1;
+			}
+      cout << "Question no. 2:" << endl;
+			cout << "Of these four elements, which one is the appropriate element of Sodium?";
+			cout << "A. Sb                     B. Si" << endl;
+			cout << "C. Na                     D. Sm";
+			cin >> ans;
+			switch (ans)
+			{
+			case 'A' :
+				cout << " Wrong answer!";
+				break;
+			case 'B' :
+			    cout << " Wrong answer!";
+				break;
+			case 'D' :
+				cout << " Wrong answer!";
+				break;
+			default:
+				cout <<" You got the correct answer!";
+        U=1;
+			} 
+    cout << "Question no. 3:" << endl;
+			cout << "Choose the appropriate options to complete the sentences." << endl;
+			cout << "Most of the patient visits ---- to physician assistants in the recent years all around he world";
+			cout << "A. have been made                    B. will have been made" << endl;
+			cout << "C. make                              D. have made";
+			cin >> ans;
+			switch (ans)
+			{
+			case 'B' :
+				cout << "Wrong answer!";
+				break;
+			case 'C' :
+			    cout << "Wrong answer!";
+				break;
+			case 'D' :
+				cout << "Wrong answer!"; 
+        break;
+			default:
+				cout <<" You got the correct answer!";
+        V=1;
+			} 
+      cout << "Question 4:" << endl;
+			cout << "K is the chemical symbol for which element?" << endl;
+			cout << "A. Magnesium                       B. Potassium" << endl;
+			cout << "C. Mercury                         D. Oxygen";
+			cin >> ans;
+			switch (ans)
+			{
+			case 'A' :
+				cout << " Wrong answer!";
+				break;
+			case 'C' :
+			    cout << " Wrong answer!";
+				break;
+			case 'D' :cout << " Wrong answer!";
+				break;
+			default:
+				cout <<" You got the correct answer!";
+        W=1;
+			}
+      cout << "Question 5:" << endl;
+			cout << "Which of the following is used in pencils?" << endl;
+			cout << "A. Graphite                        B. Silicon" << endl;
+			cout << "C. Charcoal                        D. Phosporous";
+			cin >> ans;
+			switch (ans)
+			{
+			case 'B' :
+				cout << " Wrong answer!";
+				break;
+			case 'C' :
+			    cout << " Wrong answer!";
+				break;
+			case 'D' :
+				cout << " Wrong answer!";
+				break;
+			default:
+				cout <<" You got the correct answer!";
+        X=1;
+			}
+     value=T+U+V+W+X;
+     if(value<=1)
+     
+       cout<<"your iq is below average that is approx :70"<<endl;
+     if(value<=2)
+     cout<<"your iq is average that is approx:110"<<endl;
+     if(value>=3)
+    cout<<"your iq is high that is approx :140"<<endl;
+
+cout<<"\nenter IQ : \n";
+cin>>IQ;
+cout<<"\nenter ur present age : ";
+cin>>presentage;
+mentalage=(IQ*presentage)/100;
+cout<<"your mental age is :"<<mentalage;
+return 0;
+}
